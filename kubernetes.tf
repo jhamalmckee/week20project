@@ -1,10 +1,10 @@
 #---root/kubernetes.tf---
 
-resource "kubernetes_deployment" "krypt0-week20-k8s" {
+resource "kubernetes_deployment" "week20projectk8s" {
   metadata {
-    name = "krypt0-week20-k8s"
+    name = "week20projectk8s"
     labels = {
-      test = "krypt0-week20-app"
+      test = "week20project_test"
     }
   }
 
@@ -12,19 +12,19 @@ resource "kubernetes_deployment" "krypt0-week20-k8s" {
     replicas = 2
     selector {
       match_labels = {
-        test = "krypt0-week20-app"
+        test = "week20project_test"
       }
     }
     template {
       metadata {
         labels = {
-          test = "krypt0-week20-app"
+          test = "week20project_test"
         }
       }
       spec {
         container {
           image = "nginx:1.7.8"
-          name  = "krypt0-week20-k8s"
+          name  = "week20projectk8s"
 
           resources {
             limits = {
@@ -42,14 +42,14 @@ resource "kubernetes_deployment" "krypt0-week20-k8s" {
   }
 }
 
-resource "kubernetes_service" "krypt0-week20-k8s" {
+resource "kubernetes_service" "week20projectk8s" {
   metadata {
-    name = "krypt0-week20-k8s"
+    name = "week20projectk8s"
   }
 
   spec {
     selector = {
-      test = "krypt0-week22-app"
+      test = "week20project_test"
     }
     port {
       port        = 80
