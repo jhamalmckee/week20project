@@ -6,6 +6,7 @@ module "cluster" {
   endpoint_public_access  = true
   endpoint_private_access = false
   instance_types          = ["t3.small"]
+  key_pair                = "week20KP_US2"
 }
 
 module "networking" {
