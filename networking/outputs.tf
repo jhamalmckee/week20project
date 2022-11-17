@@ -1,9 +1,9 @@
 #---networking/outputs.tf---
 
 output "public_subnets" {
-  value = aws_subnet.krypt0_22_public_subnet.*.id
+  value = aws_subnet.week20_public_subnet.*.id
 }
 
 output "vpc_id" {
-  value = aws_vpc.krypt0_22_vpc.id
+  value = aws_vpc.week20_vpc.id
 }
