@@ -105,22 +105,22 @@ resource "aws_iam_role_policy_attachment" "week20-week20-AmazonEKSVPCResourceCon
   role       = aws_iam_role.week20-week20.name
 }
 
-resource "aws_iam_role_policy_attachment" "krypt0-week22-AmazonEKSWorkerNodePolicy" {
+resource "aws_iam_role_policy_attachment" "week20-week20-AmazonEKSWorkerNodePolicy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
   role       = aws_iam_role.week20-week20-cluster.name
 }
 
-resource "aws_iam_role_policy_attachment" "krypt0-week22-AmazonEKS_CNI_Policy" {
+resource "aws_iam_role_policy_attachment" "week20-week20-AmazonEKS_CNI_Policy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
   role       = aws_iam_role.week20-week20-cluster.name
 }
 
-resource "aws_iam_role_policy_attachment" "krypt0-week22-AmazonEC2ContainerRegistryReadOnly" {
+resource "aws_iam_role_policy_attachment" "week20-week20-AmazonEC2ContainerRegistryReadOnly" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
   role       = aws_iam_role.week20-week20-cluster.name
 }
 
-resource "aws_iam_role_policy_attachment" "krypt0-week22-AmazonEKSClusterPolicy" {
+resource "aws_iam_role_policy_attachment" "week20-week20-AmazonEKSClusterPolicy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
   role       = aws_iam_role.week20-week20.name
 }
