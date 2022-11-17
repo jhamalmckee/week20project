@@ -7,7 +7,7 @@ resource "random_string" "random" {
 
 resource "aws_eks_cluster" "choco20-choc20" {
   name     = "choco20-choc20"-${random_string.random.result}"
-  role_arn = aws_iam_role.week20-week20.arn
+  role_arn = aws_iam_role.choco20-choc20.arn
 
   vpc_config {
     subnet_ids              = var.public_subnets
