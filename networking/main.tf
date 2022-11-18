@@ -46,7 +46,7 @@ resource "aws_subnet" "week20_private_subnet" {
   }
 }
 
-resource "aws_route_table_association" "krypt0_public_association" {
+resource "aws_route_table_association" "week20_public_association" {
   count          = var.public_subnet_count
   subnet_id      = aws_subnet.week20_public_subnet.*.id[count.index]
   route_table_id = aws_route_table.week20_public_rt.id
